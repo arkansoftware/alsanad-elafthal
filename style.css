@@ -1021,6 +1021,97 @@ section {
     text-overflow: ellipsis;
 }
 
+/* Location Card */
+.location-icon {
+    background: #fff3e0 !important;
+    color: #e65100 !important;
+}
+
+.location-card:hover .location-icon {
+    background: #e65100 !important;
+    color: var(--white) !important;
+}
+
+/* ==================== LOCATION SECTION ==================== */
+.location-section {
+    background: var(--white);
+}
+
+.map-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 0;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-100);
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-overlay-info {
+    background: var(--gray-50);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.map-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.map-info-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--red-50);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.map-info-card h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.map-info-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.map-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+}
+
+.map-btn svg {
+    transform: none !important;
+}
+
 /* ==================== FOOTER ==================== */
 footer {
     background: var(--gray-900);
@@ -1320,6 +1411,19 @@ footer .container {
     .contact-cards {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    /* Location/Map */
+    .map-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        min-height: 300px;
+    }
+
+    .map-overlay-info {
+        padding: 25px 20px;
     }
 
     /* Buttons */
